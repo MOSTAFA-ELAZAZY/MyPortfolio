@@ -18,13 +18,6 @@ namespace Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Owner>().HasData(new Owner
-            {
-                FullName = "Mostafa Elazazy",
-                Avatar = "mostafa.jpg",
-                Profil = ".Net Developer"
-
-            });
         }
         public DbSet<Owner> Owner { get; set; }
         public DbSet<PortfolioItem> PortfolioItems { get; set; }
