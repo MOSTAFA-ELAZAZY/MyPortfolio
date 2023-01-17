@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Owner
+
+@{
     ViewData["Title"] = "Index";
 }
 
@@ -7,10 +9,14 @@
     <div class="container d-flex align-items-center flex-column">
 
         <!-- Masthead Avatar Image -->
-        <img class="masthead-avatar mb-5" src="~/img/avatar.jpg" style="border-radius:50%" alt="">
+        @*<img class="masthead-avatar mb-5" style="border-radius:50%" alt="">*@
+
+        <img class="masthead-avatar mb-5" src="~/img/portfolio/Profile.jpg" style="border-radius:50%" alt="Red dot" />
+
+        @*<div class="col-md-2 Poster" style="background: url(data:image\/*;base64, @(Convert.ToBase64String(Model.Avatar))) "></div>*@
 
         <!-- Masthead Heading -->
-        <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+        <h1 class="masthead-heading text-uppercase mb-0"></h1>
 
         <!-- Icon Divider -->
         <div class="divider-custom divider-light">
@@ -22,7 +28,7 @@
         </div>
 
         <!-- Masthead Subheading -->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+        <p class="masthead-subheading font-weight-light mb-0">@Model.Profil</p>
 
     </div>
 </header>
@@ -95,7 +101,7 @@
 
         <!-- About Section Button -->
         <div class="text-center mt-4">
-            <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
+            <a class="btn btn-xl btn-outline-light" href="~/files/Mostafa Mamdouh Elazazy.pdf">
                 <i class="fas fa-download mr-2"></i>
                 Free Download!
             </a>

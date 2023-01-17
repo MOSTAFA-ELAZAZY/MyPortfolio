@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Entities
+namespace Web.DAL.Entities
 {
-   public class Owner : EntityBase
+    public class Owner : EntityBase
     {
         [Required, MaxLength(250)]
         public string FullName { get; set; }

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Web.DAL.Entities;
 
-namespace Core.Entities
+namespace Web.BL.Interface
 {
-   public class EntityBase
+   public interface IOwner
     {
-        public int Id { get; set; }
+        Owner Get();
     }
 }
