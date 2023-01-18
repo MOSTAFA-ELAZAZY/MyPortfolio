@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web.BL.Interface;
+using Web.BL.Logic;
 using Web.BL.Repository;
 
 namespace Web
@@ -29,8 +30,9 @@ namespace Web
         {
             services.AddControllersWithViews();
             services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddScoped<ICacheService, CacheService>();
             services.AddScoped<IOwner, OwnerRep>();
+       
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

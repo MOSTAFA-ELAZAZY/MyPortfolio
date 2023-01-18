@@ -17,6 +17,7 @@ namespace Web.Controllers
         public IActionResult Index()
         {
             var data = _owner.Get();
+
             return View(data); ;
         }
 
